@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: django-blog-backend
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn backend.wsgi:application"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: backend.settings
+      - key: SECRET_KEY
+        value: YOUR_SECRET_KEY  # 你可以在 Render 的仪表盘上配置这个环境变量
+      - key: DEBUG
+        value: 'false'
