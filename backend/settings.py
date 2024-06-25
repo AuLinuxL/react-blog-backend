@@ -26,7 +26,11 @@ SECRET_KEY = 'django-insecure-3wd8atnzb=bdtl1w82^#gi8*(6j5l^#e4g$%)%)_(8a^wn&3it
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'react-blog-backend-aljd.onrender.com',
+    'localhost',  
+    '127.0.0.1', 
+]
 
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
